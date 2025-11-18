@@ -38,11 +38,11 @@
  "tilesets":[
         {
          "firstgid":1,
-         "source":"TowerPlacement.tsx"
+         "source":"..\/..\/..\/..\/..\/..\/TowerPlacement.tsx"
         }, 
         {
          "firstgid":2,
-         "source":"EnemyPath.tsx"
+         "source":"..\/..\/..\/..\/..\/..\/EnemyPath.tsx"
         }],
  "tilewidth":16,
  "type":"map",
