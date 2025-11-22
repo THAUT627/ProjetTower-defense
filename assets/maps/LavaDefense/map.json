@@ -61,20 +61,7 @@
  "tiledversion":"1.11.2",
  "tileheight":16,
  "tilesets":[
-        {
-         "columns":3,
-         "firstgid":1,
-         "image":"map.png",
-         "imageheight":16,
-         "imagewidth":48,
-         "margin":0,
-         "name":"Sprites",
-         "spacing":0,
-         "tilecount":3,
-         "tileheight":16,
-         "tilewidth":16
-        }, 
-        {
+         {
          "columns":3,
          "firstgid":20,
          "image":"map.png",
