@@ -63,20 +63,16 @@
  "tilesets":[
         {
          "columns":3,
-         "firstgid":1,
+         "firstgid":20,
          "image":"map.png",
          "imageheight":16,
          "imagewidth":48,
          "margin":0,
-         "name":"LavaSprite",
+         "name":"Sprites",
          "spacing":0,
          "tilecount":3,
          "tileheight":16,
          "tilewidth":16
-        }, 
-        {
-         "firstgid":20,
-         "source":"map.png"
         }],
  "tilewidth":16,
  "type":"map",
