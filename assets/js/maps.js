@@ -62,9 +62,9 @@ tinydefence.maps = [
         // Readable name for this map/level
         name: 'Lava Defense',
         // Start point for the enemies
-        start: { x: 0, y: 2 },
+        start: { x: 0, y: 3 },
         // End point for the enemies
-        end: { x: 26, y: 0 },
+        end: { x: 29, y: 1 },
         // Waves
         waves: [
             { dropInMillis: 1500, maxEnemies: 2, enemyHealth: 10, enemySpeed: 20, points: 5, type: 'enemy' },

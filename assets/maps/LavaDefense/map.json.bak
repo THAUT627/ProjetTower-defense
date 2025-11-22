@@ -1,0 +1,1 @@
+{ "backup": "Original map.json before remapping GIDs", "note": "If you need to restore, delete the new map.json and rename this file to map.json" }
