@@ -64,7 +64,7 @@
         {
          "columns":3,
          "firstgid":1,
-         "image":"LavaSprite.png",
+         "image":"map.png",
          "imageheight":16,
          "imagewidth":48,
          "margin":0,
@@ -77,7 +77,7 @@
         {
          "columns":3,
          "firstgid":20,
-         "image":"LavaSprite.png",
+         "image":"map.png",
          "imageheight":16,
          "imagewidth":48,
          "margin":0,
