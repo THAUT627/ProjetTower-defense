@@ -74,6 +74,7 @@ tinydefence.maps = [
             { dropInMillis: 1000, maxEnemies: 10, enemyHealth: 20, enemySpeed: 60, points: 5, type: 'enemy' },
             { dropInMillis: 1000, maxEnemies: 15, enemyHealth: 20, enemySpeed: 60, points: 5, type: 'enemy' },
             { dropInMillis: 800, maxEnemies: 20, enemyHealth: 20, enemySpeed: 60, points: 5, type: 'enemy' },
+            { dropInMillis: 800, maxEnemies: 20, enemyHealth: 20, enemySpeed: 60, points: 5, type: 'enemy' },
             // Add more waves here
         ]
     },
