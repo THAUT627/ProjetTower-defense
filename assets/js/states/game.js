@@ -23,7 +23,7 @@ tinydefence.rungame = {
         
 			tinydefence.game.ui = new UI(tinydefence.game);
         
-        // Background music: add audio object and play (with mobile fallback)
+        // Background music: add audio object and play
         try {
             this.bgm = this.game.add.audio('bgm');
             this.bgm.loop = true;
