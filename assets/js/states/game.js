@@ -21,7 +21,22 @@ tinydefence.rungame = {
             lives: tinydefence.game.model.lives,
         }
         
-        tinydefence.game.ui = new UI(tinydefence.game);
+			tinydefence.game.ui = new UI(tinydefence.game);
+        
+        // Background music: add audio object and play (with mobile fallback)
+        try {
+            this.bgm = this.game.add.audio('bgm');
+            this.bgm.loop = true;
+            this.bgm.volume = 0.6;
+            // Try to play immediately; if blocked, play on first user interaction
+            var sound = this.bgm.play();
+            if (!sound) {
+                this.game.input.onDown.addOnce(function() { if (this.bgm && !this.bgm.isPlaying) this.bgm.play(); }, this);
+            }
+        } catch (e) {
+            // If audio subsystem not available or missing asset, ignore silently
+            console.warn('BGM could not be started:', e);
+        }
         
         this.gameEnd = false;
        
@@ -29,9 +44,7 @@ tinydefence.rungame = {
 
         this.model.currentWave = -1;
         this.nextWaveOrLevel();
-    },
-
-    createMap() {
+    },    createMap() {
         // Load current map
         this.currentMap = tinydefence.maps[this.model.currentMapIndex];
         
@@ -171,6 +184,17 @@ tinydefence.rungame = {
                 this.game.debug.text('desired FPS: ' +   this.game.time.desiredFps, 2, 42, "#00ff00");
             }
         
+        }
+    },
+
+    // Stop background music when this state is shutdown
+    shutdown: function() {
+        try {
+            if (this.bgm && this.bgm.isPlaying) {
+                this.bgm.stop();
+            }
+        } catch (e) {
+            // ignore
         }
     }
 }

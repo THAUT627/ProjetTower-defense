@@ -33,6 +33,9 @@ tinydefence.preload.prototype = {
 			this.game.load.image(map.key + '_sprites', map.sprite);
 		});
 
+		// Load background music (user provided file: gmp.mp3)
+		this.game.load.audio('bgm', 'assets/audio/gmp.mp3');
+
 		// Load all tower assets
 		tinydefence.towerManager.load();
 	},
