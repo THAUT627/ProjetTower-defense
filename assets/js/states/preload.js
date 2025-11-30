@@ -27,23 +27,28 @@ tinydefence.preload.prototype = {
 			'assets/fonts/font_red.png',
 			'assets/fonts/font_red.fnt');
 
-		const lavaMapOptions = [
-			{ json: 'map1.json', png: 'map1.png', start: { x: 0, y: 3 }, end: { x: 25, y: 1 } },
-			{ json: 'map2.json', png: 'map2.png', start: { x: 3, y: 0 }, end: { x: 27, y: 14 } },
-			{ json: 'map3.json', png: 'map3.png', start: { x: 6, y: 12 }, end: { x: 29, y: 6 } },
-		];
+		// Choisir une map LavaDefense aléatoirement
+const lavaMaps = [
+    { json: 'assets/maps/LavaDefense/map1.json', png: 'assets/maps/LavaDefense/map1.png' },
+    { json: 'assets/maps/LavaDefense/map2.json', png: 'assets/maps/LavaDefense/map2.png' },
+    { json: 'assets/maps/LavaDefense/map3.json', png: 'assets/maps/LavaDefense/map3.png' }
+];
 
-		const randomLava = Phaser.ArrayUtils.getRandomItem(lavaMapOptions);
+const randomMap = Phaser.ArrayUtils.getRandomItem(lavaMaps);
 
-		const lavaMap = tinydefence.maps.find(m => m.key === 'LavaDefense');
+// Charger la carte choisie
+this.game.load.tilemap(
+    'CurrentLavaMap',
+    randomMap.json,
+    null,
+    Phaser.Tilemap.TILED_JSON
+);
 
-		lavaMap.data = 'assets/maps/LavaDefense/' + randomLava.json;
-		lavaMap.sprite = 'assets/maps/LavaDefense/' + randomLava.png;
-
-		lavaMap.start = randomLava.start;
-		lavaMap.end = randomLava.end;
-
-
+// Charger le spritesheet associé
+this.game.load.image(
+    'CurrentLavaTiles',
+    randomMap.png
+);
 
 		// Load all defined maps in maps.js
 		tinydefence.maps.forEach(map => {
